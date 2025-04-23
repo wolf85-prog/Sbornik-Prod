@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useNavigation } from 'expo-router';
 import { DrawerActions } from '@react-navigation/native';
 //import { images } from "../constants";
+//import header from "@/assets/images/drawer-header.jpg";
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function CustomDrawerContent(props:any) {
@@ -21,14 +22,14 @@ export default function CustomDrawerContent(props:any) {
     }
   return (
     <View style={{flex: 1, padding: 0}}>
-      <DrawerContentScrollView {...props} scrollEnabled={false}>
-        <View style={{ paddingLeft: 0}}>
-            {/* <Image
-              style={{width: 350, height: 215, marginBottom: 15}}
-              source={images.header}
+      <View style={{ paddingLeft: 0}}>
+            <Image
+              style={{height: 215, marginBottom: 15}}
+              source={require('@/assets/images/drawer-header.jpg')}
               resizeMode="cover"
-            /> */}
+            />
         </View>
+      <DrawerContentScrollView {...props} scrollEnabled={false} style={{padding: 0}}>  
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
 

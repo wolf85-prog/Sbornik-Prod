@@ -5,6 +5,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import Slider from '@react-native-community/slider';
+import { DrawerToggleButton } from "@react-navigation/drawer";
 
 export default function HomeScreen() {
   return (
@@ -49,6 +50,8 @@ export default function HomeScreen() {
           minimumTrackTintColor="gray"
           maximumTrackTintColor="#000000"
         />
+
+        <DrawerToggleButton />
       </ThemedView>
     </ParallaxScrollView>
   );
