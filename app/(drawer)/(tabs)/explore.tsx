@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Platform } from 'react-native';
+import { StyleSheet, Image, Platform, View, Text } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -6,8 +6,18 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import MyPager from '@/components/MyPager'
 
 export default function TabTwoScreen() {
+
+  // if (Platform.OS === "web") {
+  //   return (
+  //     <View style={styles.container}>
+  //       <Text>Только для телефонов</Text>
+  //     </View>
+  //   );
+  // } else {
+    
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
@@ -23,7 +33,7 @@ export default function TabTwoScreen() {
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
       <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      {/* <Collapsible title="File-based routing">
         <ThemedText>
           This app has two screens:{' '}
           <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
@@ -90,9 +100,13 @@ export default function TabTwoScreen() {
             </ThemedText>
           ),
         })}
-      </Collapsible>
+      </Collapsible> */}
+
+      <MyPager />
+
     </ParallaxScrollView>
   );
+//}
 }
 
 const styles = StyleSheet.create({
@@ -105,5 +119,13 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+
+  container: {
+    flex: 1,
+  },
+  page: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

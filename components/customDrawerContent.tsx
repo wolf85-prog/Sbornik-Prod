@@ -24,7 +24,7 @@ export default function CustomDrawerContent(props:any) {
     <View style={{flex: 1, padding: 0}}>
       <View style={{ paddingLeft: 0}}>
             <Image
-              style={{height: 215, width: '100%', marginBottom: 15}}
+              style={{height: 215, width: '100%',  marginBottom: 15}}
               source={require('@/assets/images/drawer-header.jpg')}
               resizeMode="cover"
             />
